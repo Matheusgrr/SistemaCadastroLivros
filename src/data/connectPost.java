@@ -41,7 +41,7 @@ public class connectPost {
 			preparedStatement.setString(2, autorP);
 			preparedStatement.setString(3, generoP);
 			preparedStatement.execute();
-			System.out.println("Armazenado :"+nomeP+autorP+generoP);
+			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -56,7 +56,7 @@ public class connectPost {
 			resultadosSQL=stm.executeQuery("SELECT nome from livros");
 			while(resultadosSQL.next()) {
 				String nomeResultado= resultadosSQL.getString("nome");
-				System.out.println(nomeResultado);
+				
 				nomesLivros=(nomesLivros+"; "+nomeResultado);
 			}
 			
